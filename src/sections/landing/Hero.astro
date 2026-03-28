@@ -50,180 +50,190 @@ const plantas = [
 ];
 ---
 
-<section class="hero">
-  <div class="hero-bg"></div>
+<section id="hero" class="hero">
   <div class="container">
-    <div class="hero-content">
+    <header class="hero-title">
       <h1>
-        Tu Guía Definitiva<br /><span class="highlight"
-          >para el Cuidado de Plantas</span
-        >
+        Tu Espacio Definitivo <br />
+        <span class="highlight">para el Cuidado de Plantas</span>
       </h1>
       <p class="hero-subtitle">
         Descubre todo sobre tus plantas favoritas: cuidados, compatibilidad,
         beneficios y mucho más. Todo en un solo lugar.
       </p>
+    </header>
 
-      <div class="search-container">
-        <div class="search-box">
-          <svg
-            class="search-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-          <input
-            type="text"
-            id="plantSearch"
-            placeholder="Escribe el nombre de una planta..."
-            autocomplete="off"
-            list="plantList"
-          />
-          <datalist id="plantList">
-            {plantas.map((planta) => <option value={planta} />)}
-          </datalist>
-          <button class="search-btn" onclick="buscarPlanta()"> Buscar </button>
-        </div>
-        <p class="search-hint">
-          Ejemplo: Suculenta, Monstera, Lavanda, Aloe Vera...
-        </p>
+    <section class="search-container">
+      <div class="search-box">
+        <svg
+          class="search-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+        <input
+          type="text"
+          id="plantSearch"
+          placeholder="Escribe el nombre de una planta..."
+          autocomplete="off"
+          list="plantList"
+        />
+        <datalist id="plantList">
+          {plantas.map((planta) => <option value={planta} />)}
+        </datalist>
+        <button class="search-btn" onclick="buscarPlanta()"> Buscar </button>
       </div>
+      <p class="search-hint">
+        Ejemplo: Suculenta, Monstera, Lavanda, Aloe Vera...
+      </p>
+    </section>
 
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">50+</span>
-          <span class="stat-label">Plantas documentadas</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">24/7</span>
-          <span class="stat-label">Asistente IA disponible</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Información gratuita</span>
-        </div>
+    <section class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">50+</span>
+        <span class="stat-label">Plantas documentadas</span>
       </div>
-    </div>
+      <div class="stat">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Asistente IA disponible</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">100%</span>
+        <span class="stat-label">Información gratuita</span>
+      </div>
+    </section>
   </div>
 </section>
 
 <style>
   .hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 80px;
-    overflow: hidden;
-  }
-
-  .hero-bg {
-    position: absolute;
-    inset: 0;
+    width: 100%;
+    height: 100%;
     background:
       radial-gradient(
         ellipse at top,
         rgba(46, 160, 67, 0.15) 0%,
-        transparent 50%
+        transparent 75%
       ),
       radial-gradient(
-        ellipse at bottom right,
-        rgba(31, 111, 235, 0.1) 0%,
+        circle at 90% 50%,
+        rgba(31, 111, 235, 0.09) 0%,
         transparent 50%
       );
-    pointer-events: none;
   }
 
-  .hero-content {
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem;
+    overflow: hidden;
+    width: 75%;
+    margin: auto;
+  }
+
+  .hero-title {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+    font-size: 1.1rem;
 
-  .hero h1 {
-    margin-bottom: 1.5rem;
-  }
+    & > h1 {
+      margin-bottom: 1.4rem;
+      text-shadow: 0.2rem 0.3rem 0.8rem var(--accent-green);
+    }
 
-  .highlight {
-    color: var(--accent-green-light);
-  }
+    & .highlight {
+      color: var(--accent-green-light);
+    }
 
-  .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 3rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    & > p {
+      color: color-mix(in srgb, var(--text-primary), transparent 10%);
+      font-size: 1.25rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--text-primary);
+      }
+    }
   }
 
   .search-container {
     margin-bottom: 3rem;
-  }
 
-  .search-box {
-    display: flex;
-    align-items: center;
-    background: var(--bg-card);
-    border: 2px solid var(--border-color);
-    border-radius: 50px;
-    padding: 0.5rem;
-    max-width: 600px;
-    margin: 0 auto;
-    transition: all 0.3s ease;
-  }
+    & > .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      border-radius: 50px;
+      padding: 0.5rem;
+      /* max-width: 600px;
+      margin: 0 auto; */
+      transition: all 0.3s ease;
 
-  .search-box:focus-within {
-    border-color: var(--accent-green);
-    box-shadow: 0 0 0 4px rgba(46, 160, 67, 0.2);
-  }
+      & > .search-icon {
+        width: 24px;
+        height: 24px;
+        margin-left: 1rem;
+        color: var(--text-muted);
+        flex-shrink: 0;
+      }
 
-  .search-icon {
-    width: 24px;
-    height: 24px;
-    margin-left: 1rem;
-    color: var(--text-muted);
-    flex-shrink: 0;
-  }
+      & > input#plantSearch {
+        flex: 1;
+        background: transparent;
+        border: none;
+        padding: 1rem;
+        font-size: 1.1rem;
+        color: var(--text-primary);
+        outline: none;
+      }
 
-  .search-box input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    padding: 1rem;
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    outline: none;
-  }
+      & > input[list="plantList"] {
+        color: red;
+      }
 
-  .search-box input::placeholder {
-    color: var(--text-muted);
-  }
+      & > .search-btn {
+        background-color: var(--accent-green);
+        color: white;
+        border: none;
+        padding: 0.875rem 1.75rem;
+        border-radius: 2.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        flex-shrink: 0;
 
-  .search-btn {
-    background: var(--accent-green);
-    color: white;
-    border: none;
-    padding: 0.875rem 1.75rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-  }
+        &:hover {
+          background-color: var(--accent-green-light);
+        }
+      }
 
-  .search-btn:hover {
-    background: var(--accent-green-light);
-  }
+      &:focus-within {
+        border-color: var(--accent-green);
+        box-shadow: 0 0 0 4px rgba(46, 160, 67, 0.2);
+      }
 
-  .search-hint {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-muted);
+      @media (width <= 764px) {
+        gap: 0.2rem;
+        padding: 0.5rem;
+        border-radius: 0.8rem;
+      }
+    }
+
+    & > .search-hint {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
   }
 
   .hero-stats {
@@ -231,22 +241,19 @@ const plantas = [
     justify-content: center;
     gap: 4rem;
     flex-wrap: wrap;
-  }
-
-  .stat {
     text-align: center;
-  }
 
-  .stat-number {
-    display: block;
-    font-family: "Playfair Display", serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--accent-green-light);
-  }
+    & .stat-number {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent-green-light);
+    }
 
-  .stat-label {
-    font-size: 0.9rem;
-    color: var(--text-muted);
+    & .stat-label {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
   }
 </style>
