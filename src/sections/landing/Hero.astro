@@ -1,0 +1,252 @@
+---
+const plantas = [
+  "Suculenta",
+  "Cactus",
+  "Potus",
+  "Sansevieria",
+  "Pothos",
+  "Monstera",
+  "Ficus",
+  "Lirio de la paz",
+  "Esparraguera",
+  "Helecho",
+  "Lavanda",
+  "Romero",
+  "Albahaca",
+  "Menta",
+  "Orquídea",
+  "Aloe Vera",
+  "Peperomia",
+  "Calathea",
+  "Maranta",
+  "Philodendron",
+  "Begonia",
+  "Spathiphyllum",
+  "Drácena",
+  "Yuca",
+  "Croton",
+  "Anturio",
+  "Bromelia",
+  "Clivia",
+  "Azalea",
+  "Gardenia",
+  "Jazmín",
+  "Rosa",
+  "Dalia",
+  "Geranio",
+  "Petunia",
+  "Margarita",
+  "Tulipán",
+  "Lirio",
+  "Amarilis",
+  "Iris",
+  "Difenbaquia",
+  "Escheveria",
+  "Craspedia",
+  "Impatiens",
+  "Primula",
+  "Calentula",
+  "Violeta africana",
+];
+---
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <h1>
+        Tu Guía Definitiva<br /><span class="highlight"
+          >para el Cuidado de Plantas</span
+        >
+      </h1>
+      <p class="hero-subtitle">
+        Descubre todo sobre tus plantas favoritas: cuidados, compatibilidad,
+        beneficios y mucho más. Todo en un solo lugar.
+      </p>
+
+      <div class="search-container">
+        <div class="search-box">
+          <svg
+            class="search-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input
+            type="text"
+            id="plantSearch"
+            placeholder="Escribe el nombre de una planta..."
+            autocomplete="off"
+            list="plantList"
+          />
+          <datalist id="plantList">
+            {plantas.map((planta) => <option value={planta} />)}
+          </datalist>
+          <button class="search-btn" onclick="buscarPlanta()"> Buscar </button>
+        </div>
+        <p class="search-hint">
+          Ejemplo: Suculenta, Monstera, Lavanda, Aloe Vera...
+        </p>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Plantas documentadas</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Asistente IA disponible</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Información gratuita</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(
+        ellipse at top,
+        rgba(46, 160, 67, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at bottom right,
+        rgba(31, 111, 235, 0.1) 0%,
+        transparent 50%
+      );
+    pointer-events: none;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    color: var(--accent-green-light);
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-container {
+    margin-bottom: 3rem;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    padding: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
+
+  .search-box:focus-within {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 4px rgba(46, 160, 67, 0.2);
+  }
+
+  .search-icon {
+    width: 24px;
+    height: 24px;
+    margin-left: 1rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+  }
+
+  .search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    outline: none;
+  }
+
+  .search-box input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .search-btn {
+    background: var(--accent-green);
+    color: white;
+    border: none;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .search-btn:hover {
+    background: var(--accent-green-light);
+  }
+
+  .search-hint {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-green-light);
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+</style>

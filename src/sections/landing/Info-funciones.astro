@@ -1,0 +1,163 @@
+---
+
+---
+
+<section id="funciones" class="features">
+  <div class="container">
+    <div class="section-header">
+      <h2>Todo lo que necesitas saber</h2>
+      <p>Herramientas diseñadas para cuidar mejor de tus plantas</p>
+    </div>
+
+    <div class="features-grid">
+      <article class="feature-card">
+        <div class="feature-icon green">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"
+            ></path>
+            <path d="M12 12v6"></path>
+            <path d="M9 15h6"></path>
+          </svg>
+        </div>
+        <h3>Guía de Cuidados</h3>
+        <p>
+          Aprende todo sobre el riego, luz, sustrato y temperatura ideal para
+          cada planta. Instrucciones paso a paso para principiantes.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon teal">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <h3>Pros y Contras</h3>
+        <p>
+          Conoce las ventajas y desventajas de tener cada planta en tu hogar.
+          Información honesta para tomar la mejor decisión.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon purple">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 2v6"></path>
+            <path d="M12 22v-6"></path>
+            <path d="M4.93 10.93l4.24 4.24"></path>
+            <path d="M14.83 8.83l4.24-4.24"></path>
+            <path d="M19.07 10.93l-4.24 4.24"></path>
+            <path d="M9.17 8.83L4.93 4.59"></path>
+          </svg>
+        </div>
+        <h3>Plantas Aliadas</h3>
+        <p>
+          Descubre qué plantas se complementan entre sí y cuáles debes mantener
+          separadas para un jardín más saludable.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-icon orange">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 16v-4"></path>
+            <path d="M12 8h.01"></path>
+          </svg>
+        </div>
+        <h3>Recomendaciones</h3>
+        <p>
+          Sugerencias personalizadas según tu experiencia, espacio disponible y
+          tiempo que puedes dedicar al cuidado.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    margin-bottom: 1rem;
+  }
+
+  .features {
+    background: var(--bg-secondary);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    padding: 2.5rem;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .feature-icon.green {
+    background: rgba(46, 160, 67, 0.15);
+    color: var(--accent-green-light);
+  }
+
+  .feature-icon.teal {
+    background: rgba(31, 111, 235, 0.15);
+    color: var(--accent-teal);
+  }
+
+  .feature-icon.purple {
+    background: rgba(163, 113, 247, 0.15);
+    color: #a371f7;
+  }
+
+  .feature-icon.orange {
+    background: rgba(219, 171, 13, 0.15);
+    color: #dbab0d;
+  }
+
+  .feature-card h3 {
+    margin-bottom: 0.75rem;
+    font-family: "Inter", sans-serif;
+  }
+</style>

@@ -1,0 +1,418 @@
+---
+interface Props {
+	plantaNombre: string;
+}
+
+const { plantaNombre } = Astro.props;
+---
+
+<div class="sidebar-chat" id="sidebarChat">
+	<div class="sidebar-chat-header">
+		<div class="chat-title">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"/>
+			</svg>
+			<span>Asistente IA</span>
+		</div>
+		<button class="sidebar-close" id="closeSidebarChat">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<path d="M18 6L6 18"/>
+				<path d="M6 6l12 12"/>
+			</svg>
+		</button>
+	</div>
+
+	<div class="sidebar-chat-context">
+		<span class="context-label">Contexto activo:</span>
+		<span class="context-plant">{plantaNombre}</span>
+	</div>
+
+	<div class="sidebar-chat-messages" id="sidebarMessages">
+		<div class="message bot">
+			<div class="message-avatar">
+				<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"/>
+				</svg>
+			</div>
+			<div class="message-content">
+				<p>¡Hola! Soy tu asistente contextual sobre el <strong>{plantaNombre}</strong>.</p>
+				<p>¿Qué te gustaría saber sobre esta planta?</p>
+			</div>
+		</div>
+
+		<div class="quick-questions">
+			<button onclick="preguntarRapidaSidebar('¿Cuánto tiempo puedo estar sin regar mi {plantaNombre}?')">
+				¿Cada cuánto regar?
+			</button>
+			<button onclick="preguntarRapidaSidebar('¿Qué luz necesita?')">
+				Requisitos de luz
+			</button>
+			<button onclick="preguntarRapidaSidebar('¿Es seguro para mascotas?')">
+				¿Toxicidad?
+			</button>
+		</div>
+	</div>
+
+	<div class="sidebar-chat-input">
+		<input type="text" id="sidebarChatInput" placeholder="Pregunta sobre {plantaNombre}..." />
+		<button class="send-btn" onclick="enviarMensajeSidebar()">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<path d="M22 2L11 13"/>
+				<path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+			</svg>
+		</button>
+	</div>
+</div>
+
+<button class="sidebar-chat-trigger" id="openSidebarChat">
+	<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+		<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+	</svg>
+	<span class="trigger-label">Asistente IA</span>
+</button>
+
+<style>
+	.sidebar-chat {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 380px;
+		max-width: 100%;
+		height: 100vh;
+		background: var(--bg-primary);
+		border-left: 1px solid var(--border-color);
+		display: flex;
+		flex-direction: column;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in-out;
+		z-index: 300;
+		box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+	}
+
+	.sidebar-chat.active {
+		transform: translateX(0);
+	}
+
+	.sidebar-chat-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 1.25rem;
+		background: var(--bg-secondary);
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.chat-title {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		font-weight: 600;
+		font-size: 1rem;
+	}
+
+	.chat-title svg {
+		width: 22px;
+		height: 22px;
+		color: var(--accent-green);
+	}
+
+	.sidebar-close {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0.5rem;
+		border-radius: var(--radius-sm);
+		color: var(--text-muted);
+		transition: all 0.3s ease;
+	}
+
+	.sidebar-close:hover {
+		background: var(--bg-hover);
+		color: var(--text-primary);
+	}
+
+	.sidebar-close svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.sidebar-chat-context {
+		padding: 0.75rem 1.25rem;
+		background: rgba(46, 160, 67, 0.1);
+		border-bottom: 1px solid var(--border-color);
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.85rem;
+	}
+
+	.context-label {
+		color: var(--text-muted);
+	}
+
+	.context-plant {
+		color: var(--accent-green-light);
+		font-weight: 500;
+	}
+
+	.sidebar-chat-messages {
+		flex: 1;
+		padding: 1.25rem;
+		overflow-y: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.message {
+		display: flex;
+		gap: 0.75rem;
+		max-width: 90%;
+	}
+
+	.message.user {
+		align-self: flex-end;
+		flex-direction: row-reverse;
+	}
+
+	.message-avatar {
+		width: 32px;
+		height: 32px;
+		background: var(--bg-card);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+
+	.message-avatar svg {
+		width: 18px;
+		height: 18px;
+		color: var(--accent-green);
+	}
+
+	.message-content {
+		background: var(--bg-card);
+		padding: 0.875rem 1rem;
+		border-radius: var(--radius-sm);
+		border-top-left-radius: 4px;
+	}
+
+	.message.user .message-content {
+		background: var(--accent-green);
+		border-top-left-radius: var(--radius-sm);
+		border-top-right-radius: 4px;
+	}
+
+	.message-content p {
+		font-size: 0.9rem;
+		margin-bottom: 0.4rem;
+		color: var(--text-primary);
+		line-height: 1.5;
+	}
+
+	.message-content p:last-child {
+		margin-bottom: 0;
+	}
+
+	.message.user .message-content p {
+		color: white;
+	}
+
+	.quick-questions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
+	}
+
+	.quick-questions button {
+		background: var(--bg-hover);
+		border: 1px solid var(--border-color);
+		color: var(--text-secondary);
+		padding: 0.4rem 0.75rem;
+		border-radius: 50px;
+		font-size: 0.8rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.quick-questions button:hover {
+		background: var(--accent-green);
+		border-color: var(--accent-green);
+		color: white;
+	}
+
+	.sidebar-chat-input {
+		display: flex;
+		gap: 0.5rem;
+		padding: 1rem 1.25rem;
+		background: var(--bg-secondary);
+		border-top: 1px solid var(--border-color);
+	}
+
+	.sidebar-chat-input input {
+		flex: 1;
+		background: var(--bg-card);
+		border: 1px solid var(--border-color);
+		border-radius: var(--radius-sm);
+		padding: 0.75rem 1rem;
+		font-size: 0.9rem;
+		color: var(--text-primary);
+		outline: none;
+		transition: border-color 0.3s ease;
+	}
+
+	.sidebar-chat-input input:focus {
+		border-color: var(--accent-green);
+	}
+
+	.sidebar-chat-input input::placeholder {
+		color: var(--text-muted);
+	}
+
+	.send-btn {
+		background: var(--accent-green);
+		border: none;
+		border-radius: var(--radius-sm);
+		padding: 0.75rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.send-btn:hover {
+		background: var(--accent-green-light);
+	}
+
+	.send-btn svg {
+		width: 18px;
+		height: 18px;
+		color: white;
+	}
+
+	.sidebar-chat-trigger {
+		position: fixed;
+		bottom: 1.5rem;
+		right: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: var(--accent-green);
+		color: white;
+		border: none;
+		padding: 0.875rem 1.25rem;
+		border-radius: 50px;
+		font-size: 0.95rem;
+		font-weight: 500;
+		cursor: pointer;
+		box-shadow: 0 4px 20px rgba(46, 160, 67, 0.4);
+		transition: all 0.3s ease;
+		z-index: 250;
+	}
+
+	.sidebar-chat-trigger:hover {
+		background: var(--accent-green-light);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 24px rgba(46, 160, 67, 0.5);
+	}
+
+	.sidebar-chat-trigger svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	.trigger-label {
+		white-space: nowrap;
+	}
+
+	@media (max-width: 480px) {
+		.sidebar-chat {
+			width: 100%;
+		}
+
+		.trigger-label {
+			display: none;
+		}
+
+		.sidebar-chat-trigger {
+			width: 56px;
+			height: 56px;
+			padding: 0;
+			justify-content: center;
+			border-radius: 50%;
+		}
+	}
+</style>
+
+<script is:inline>
+	var sidebarChatAbierto = false;
+
+	function abrirSidebarChat() {
+		document.getElementById('sidebarChat')?.classList.add('active');
+		document.getElementById('sidebarChatInput')?.focus();
+		sidebarChatAbierto = true;
+	}
+
+	function cerrarSidebarChat() {
+		document.getElementById('sidebarChat')?.classList.remove('active');
+		sidebarChatAbierto = false;
+	}
+
+	function toggleSidebarChat() {
+		if (sidebarChatAbierto) {
+			cerrarSidebarChat();
+		} else {
+			abrirSidebarChat();
+		}
+	}
+
+	function preguntarRapidaSidebar(pregunta) {
+		const messages = document.getElementById('sidebarMessages');
+		if (!messages) return;
+
+		const quickBtns = document.querySelector('#sidebarMessages .quick-questions');
+		if (quickBtns) quickBtns.style.display = 'none';
+
+		const userMsg = document.createElement('div');
+		userMsg.className = 'message user';
+		userMsg.innerHTML = '<div class="message-content"><p>' + pregunta + '</p></div>';
+		messages.appendChild(userMsg);
+
+		setTimeout(() => {
+			const botMsg = document.createElement('div');
+			botMsg.className = 'message bot';
+			botMsg.innerHTML = '<div class="message-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"/></svg></div><div class="message-content"><p><em>Respuesta:</em> ' + pregunta + '</p><p>Esta es una simulación del asistente IA contextual.</p></div>';
+			messages.appendChild(botMsg);
+			messages.scrollTop = messages.scrollHeight;
+		}, 800);
+
+		messages.scrollTop = messages.scrollHeight;
+	}
+
+	function enviarMensajeSidebar() {
+		const input = document.getElementById('sidebarChatInput');
+		const texto = input?.value?.trim();
+		if (!texto) return;
+		preguntarRapidaSidebar(texto);
+		input.value = '';
+	}
+
+	document.getElementById('openSidebarChat')?.addEventListener('click', toggleSidebarChat);
+	document.getElementById('closeSidebarChat')?.addEventListener('click', cerrarSidebarChat);
+
+	document.getElementById('sidebarChatInput')?.addEventListener('keypress', function(e) {
+		if (e.key === 'Enter') {
+			enviarMensajeSidebar();
+		}
+	});
+
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape' && sidebarChatAbierto) {
+			cerrarSidebarChat();
+		}
+	});
+</script>

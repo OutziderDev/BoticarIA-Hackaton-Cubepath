@@ -1,0 +1,212 @@
+---
+
+---
+
+<section id="ia" class="ai-section">
+  <div class="container">
+    <div class="ai-content">
+      <div class="ai-badge">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2"
+          ></path>
+          <path d="M7.5 13a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"></path>
+          <path d="M16.5 13a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"></path>
+        </svg>
+        <span>Nuevo</span>
+      </div>
+      <h2>Asistente IA Contextual</h2>
+      <p class="ai-description">
+        ¿Tienes dudas específicas sobre una planta? Nuestra inteligencia
+        artificial está entrenada con toda la información de nuestra base de
+        datos para responder tus preguntas de forma detallada y precisa.
+      </p>
+
+      <div class="ai-features">
+        <div class="ai-feature">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <path d="M12 17h.01"></path>
+          </svg>
+          <span>Responde dudas específicas</span>
+        </div>
+        <div class="ai-feature">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+            ></path>
+          </svg>
+          <span>Conversaciones naturales</span>
+        </div>
+        <div class="ai-feature">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 2v4"></path>
+            <path d="M12 18v4"></path>
+            <path d="M4.93 4.93l2.83 2.83"></path>
+            <path d="M16.24 16.24l2.83 2.83"></path>
+            <path d="M2 12h4"></path>
+            <path d="M18 12h4"></path>
+            <path d="M4.93 19.07l2.83-2.83"></path>
+            <path d="M16.24 7.76l2.83-2.83"></path>
+          </svg>
+          <span>Disponible 24 horas</span>
+        </div>
+      </div>
+
+      <div class="ai-preview">
+        <div class="chat-bubble user">
+          <span>¿Cómo cuido mi potus en invierno?</span>
+        </div>
+        <div class="chat-bubble bot">
+          <div class="bot-avatar">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"
+              ></path>
+            </svg>
+          </div>
+          <div class="bot-message">
+            <p>
+              En invierno, reduce el riego a cada 10-14 días y asegúrate de que
+              reciba luz indirecta. El potus es resistente pero evita corrientes
+              de aire frío y temperaturas menores a 15°C.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ai-section {
+    background: var(--bg-secondary);
+  }
+
+  .ai-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(46, 160, 67, 0.15);
+    color: var(--accent-green-light);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .ai-badge svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .ai-description {
+    margin-bottom: 2.5rem;
+  }
+
+  .ai-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .ai-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+  }
+
+  .ai-feature svg {
+    width: 20px;
+    height: 20px;
+    color: var(--accent-teal);
+  }
+
+  .ai-preview {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .chat-bubble.user {
+    background: var(--accent-green);
+    color: white;
+    padding: 0.875rem 1.25rem;
+    border-radius: 16px 16px 4px 16px;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    max-width: 80%;
+  }
+
+  .chat-bubble.bot {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .bot-avatar {
+    width: 36px;
+    height: 36px;
+    background: var(--bg-hover);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .bot-avatar svg {
+    width: 20px;
+    height: 20px;
+    color: var(--accent-green);
+  }
+
+  .bot-message {
+    background: var(--bg-hover);
+    padding: 0.875rem 1.25rem;
+    border-radius: 4px 16px 16px 16px;
+  }
+
+  .bot-message p {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+  }
+</style>

@@ -1,0 +1,246 @@
+---
+
+---
+
+<section id="beneficios" class="benefits">
+  <div class="container">
+    <div class="benefits-content">
+      <div class="benefits-text">
+        <h2>¿Por qué elegir PlantaCare?</h2>
+        <p class="benefits-intro">
+          Más que una simple base de datos, somos tu compañero en el mundo del
+          cultivo
+        </p>
+
+        <ul class="benefits-list">
+          <li>
+            <span class="check-icon">✓</span>
+            <div>
+              <strong>Información Verificada</strong>
+              <p>
+                Cada planta cuenta con datos verificados y actualizados
+                regularmente por expertos en botánica.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <div>
+              <strong>Fácil de Usar</strong>
+              <p>
+                Interfaz intuitiva diseñada para todas las edades. Sin
+                complicaciones, solo la información que necesitas.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <div>
+              <strong>Completamente Gratuito</strong>
+              <p>
+                Accede a toda la información sin costos ocultos ni
+                suscripciones. Tu jardín te lo agradecerá.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <div>
+              <strong>Siempre Disponible</strong>
+              <p>
+                Consulta nuestra base de datos en cualquier momento, desde
+                cualquier dispositivo.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="benefits-visual">
+        <div class="visual-card">
+          <div class="plant-illustration">
+            <svg viewBox="0 0 200 200" class="plant-svg">
+              <defs>
+                <linearGradient
+                  id="leafGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop offset="0%" style="stop-color:#2ea043"></stop>
+                  <stop offset="100%" style="stop-color:#238636"></stop>
+                </linearGradient>
+                <linearGradient
+                  id="potGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" style="stop-color:#8b4513"></stop>
+                  <stop offset="100%" style="stop-color:#5d3a1a"></stop>
+                </linearGradient>
+              </defs>
+              <ellipse cx="100" cy="170" rx="45" ry="15" fill="#1c2128"
+              ></ellipse>
+              <path
+                d="M70 170 L75 130 L125 130 L130 170 Z"
+                fill="url(#potGradient)"></path>
+              <ellipse cx="100" cy="130" rx="25" ry="8" fill="#3d2817"
+              ></ellipse>
+              <path
+                d="M100 130 Q80 100 60 90"
+                stroke="url(#leafGradient)"
+                stroke-width="8"
+                fill="none"
+                stroke-linecap="round"></path>
+              <path
+                d="M100 130 Q120 100 140 90"
+                stroke="url(#leafGradient)"
+                stroke-width="8"
+                fill="none"
+                stroke-linecap="round"></path>
+              <path
+                d="M100 130 Q90 90 85 60"
+                stroke="url(#leafGradient)"
+                stroke-width="8"
+                fill="none"
+                stroke-linecap="round"></path>
+              <path
+                d="M100 130 Q110 90 115 60"
+                stroke="url(#leafGradient)"
+                stroke-width="8"
+                fill="none"
+                stroke-linecap="round"></path>
+              <ellipse
+                cx="55"
+                cy="85"
+                rx="20"
+                ry="30"
+                fill="url(#leafGradient)"
+                transform="rotate(-30 55 85)"></ellipse>
+              <ellipse
+                cx="145"
+                cy="85"
+                rx="20"
+                ry="30"
+                fill="url(#leafGradient)"
+                transform="rotate(30 145 85)"></ellipse>
+              <ellipse
+                cx="82"
+                cy="55"
+                rx="15"
+                ry="25"
+                fill="url(#leafGradient)"
+                transform="rotate(-15 82 55)"></ellipse>
+              <ellipse
+                cx="118"
+                cy="55"
+                rx="15"
+                ry="25"
+                fill="url(#leafGradient)"
+                transform="rotate(15 118 55)"></ellipse>
+            </svg>
+          </div>
+          <div class="visual-label">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span>Base de datos en crecimiento</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits {
+    padding: 6rem 0;
+  }
+
+  .benefits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .benefits-intro {
+    margin-bottom: 2rem;
+  }
+
+  .benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .benefits-list li {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .check-icon {
+    width: 28px;
+    height: 28px;
+    background: rgba(46, 160, 67, 0.2);
+    color: var(--accent-green-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  .benefits-list strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+  }
+
+  .benefits-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .visual-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 3rem;
+    text-align: center;
+  }
+
+  .plant-illustration {
+    margin-bottom: 2rem;
+  }
+
+  .plant-svg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .visual-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--accent-green-light);
+    font-weight: 500;
+  }
+
+  .visual-label svg {
+    width: 20px;
+    height: 20px;
+  }
+</style>
