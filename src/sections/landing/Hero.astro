@@ -25,28 +25,6 @@ const plantas = [
   "Drácena",
   "Yuca",
   "Croton",
-  "Anturio",
-  "Bromelia",
-  "Clivia",
-  "Azalea",
-  "Gardenia",
-  "Jazmín",
-  "Rosa",
-  "Dalia",
-  "Geranio",
-  "Petunia",
-  "Margarita",
-  "Tulipán",
-  "Lirio",
-  "Amarilis",
-  "Iris",
-  "Difenbaquia",
-  "Escheveria",
-  "Craspedia",
-  "Impatiens",
-  "Primula",
-  "Calentula",
-  "Violeta africana",
 ];
 ---
 
@@ -257,3 +235,24 @@ const plantas = [
     }
   }
 </style>
+
+<script>
+  function buscarPlanta() {
+    const input = document.getElementById("#plantSearch") as HTMLInputElement;
+    const valor = input?.value?.trim();
+
+    if (valor) {
+      alert(
+        `Buscando información sobre: ${valor}\n\nEsta功能 estará disponible pronto.`,
+      );
+      console.log("Búsqueda:", valor);
+    }
+  }
+
+  const input = document.getElementById("plantSearch");
+  input?.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      buscarPlanta();
+    }
+  });
+</script>

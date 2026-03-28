@@ -44,3 +44,46 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+---
+
+## 📁 Project Structure
+
+```text
+Hackaton-Boticaria-cubepath/
+├── public/
+│   ├── favicon.ico
+│   └── favicon.svg
+├── src/
+│   ├── assets/
+│   │   ├── astro.svg
+│   │   └── background.svg
+│   ├── components/
+│   │   ├── SidebarChat.astro
+│   │   └── Welcome.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   ├── index.astro
+│   │   └── planta.astro
+│   └── sections/
+│       ├── Footer.astro
+│       └── landing/
+│           ├── Faq.astro
+│           ├── Header.astro
+│           ├── Hero.astro
+│           ├── Info-IA.astro
+│           ├── Info-beneficios.astro
+│           └── Info-funciones.astro
+├── .astro/
+├── .git/
+├── .vscode/
+├── node_modules/
+├── astro.config.mjs
+├── package.json
+├── pnpm-lock.yaml
+├── tsconfig.json
+├── .gitignore
+├── .oxlintrc.json
+└── README.md
+```
