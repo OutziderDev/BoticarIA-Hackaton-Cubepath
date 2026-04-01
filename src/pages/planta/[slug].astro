@@ -3,252 +3,15 @@ import type { GetStaticPaths } from "astro";
 import Layout from "@/layouts/Layout.astro";
 import SidebarChat from "@/components/SidebarChat.astro";
 import plantas from "@/data/plantas.json";
-console.log("traer plantas:", plantas);
 
 export const getStaticPaths = (() => {
-  return plantas.map((p) => ({ params: { id: p.id } }));
+  return plantas.map((p) => ({ params: { slug: p.id }, props: { planta: p } }));
 }) satisfies GetStaticPaths;
 
-const { id } = Astro.params;
-console.log("planta:", id);
+const { planta } = Astro.props;
+const { slug } = Astro.params;
 
-const datos = {
-  datosBases: {
-    nombre: "Aloe Vera",
-    nombreCientifico: "Aloe barbadensis miller",
-    subtitulo: "La planta de los mil usos medicinales",
-    familia: "Asphodelaceae",
-    origen: "Península",
-    clima: "Seco y subtropical",
-    dificultad: "Fácil",
-    toxicidad: "Moderada (tóxico para mascotas)",
-    imagen:
-      "https://images.unsplash.com/photo-1596547609652-9cf5d8c76921?w=800&q=80",
-  },
-  fichaTecnica: [
-    { label: "Nombre científico", value: "Aloe barbadensis Miller" },
-    { label: "Familia", value: "Asphodelaceae" },
-    { label: "Origen", value: "Península Arábiga" },
-    { label: "Tipo", value: "Suculenta" },
-    { label: "Altura", value: "30-60 cm" },
-    { label: "Riego", value: "Bajo (cada 2-3 semanas)" },
-    { label: "Luz", value: "Indirecta brillante" },
-    { label: "Dificultad", value: "Principiante" },
-    { label: "Toxicidad", value: "Tóxico para gatos y perros" },
-  ],
-  cuidados: [
-    {
-      titulo: "Riego",
-      icono: "💧",
-      descripcion:
-        "Riega profundamente cada 2-3 semanas, dejando que el sustrato se seque completamente entre riegos. En invierno, reduce a una vez al mes.",
-      consejo:
-        "Es mejor quedarse corto que excederse. El exceso de agua es la causa principal de muerte del Aloe Vera.",
-    },
-    {
-      titulo: "Luz",
-      icono: "☀️",
-      descripcion:
-        "Necesita luz brillante e indirecta. Puede tolerar algo de sol directo por la mañana, pero evita las horas más intensas.",
-      consejo:
-        "Si las hojas se vuelven marrones, está recibiendo demasiado sol directo.",
-    },
-    {
-      titulo: "Temperatura",
-      icono: "🌡️",
-      descripcion:
-        "Ideal entre 15-27°C. No tolera heladas ni temperaturas inferiores a 10°C.",
-      consejo:
-        "En climas fríos, cultívelo en interior cerca de una ventana bien iluminada.",
-    },
-    {
-      titulo: "Sustrato",
-      icono: "🪴",
-      descripcion:
-        "Utiliza tierra para suculentas mezclada con perlita o arena gruesa para un drenaje excelente.",
-      consejo:
-        "Nunca uses tierra para plantas de interior estándar, retiene demasiada humedad.",
-    },
-    {
-      titulo: "Abonado",
-      icono: "🌱",
-      descripcion:
-        "Fertiliza una vez al mes durante primavera y verano con un fertilizante diluido para suculentas.",
-      consejo: "En otoño e invierno, suspende el abonado por completo.",
-    },
-  ],
-  plantasAliadas: [
-    {
-      nombre: "Echeveria",
-      razon: "Requieren cuidados similares: poco riego y mucha luz",
-    },
-    {
-      nombre: "Sansevieria",
-      razon: "Ambas toleran negligencia y purifican el aire",
-    },
-    { nombre: "Cactus", razon: "Comparten necesidades de drenaje y luz" },
-    { nombre: "Sedum", razon: "Suculentas que complementan perfectamente" },
-  ],
-  plantasContraproducentes: [
-    {
-      nombre: "Helechos",
-      razon: "Requieren alta humedad constante, incompatible con Aloe",
-    },
-    {
-      nombre: "Calathea",
-      razon: "Necesitan riego frecuente y ambiente húmedo",
-    },
-    { nombre: "Singonium", razon: "Prefiere sustratos más húmedos y sombra" },
-    { nombre: "Asplenium", razon: "Ambientes tropicales demasiado húmedos" },
-  ],
-
-  prosContras: {
-    pros: [
-      "Propiedades medicinales reconocidas (quemaduras, heridas, hidratación)",
-      "Purifica el aire eliminando formaldehído y benceno",
-      "Extremadamente fácil de cuidar",
-      "Tolera períodos de abandono sin morir",
-      "Se propaga fácilmente mediante hijuelos",
-      "Aporta un toque decorativo moderno a cualquier espacio",
-    ],
-    contras: [
-      "Tóxico para mascotas (gatos y perros)",
-      "Puede ser irritante para pieles sensibles",
-      "Consumo interno del gel debe moderarse",
-      "Crece lentamente en interiores",
-      "Necesita espacio para sus raíces superficiales",
-    ],
-  },
-};
-
-const plantas = [
-  "Suculenta",
-  "Cactus",
-  "Potus",
-  "Sansevieria",
-  "Monstera",
-  "Ficus",
-  "Lirio de la paz",
-  "Lavanda",
-  "Romero",
-  "Albahaca",
-  "Menta",
-  "Orquídea",
-  "Peperomia",
-  "Calathea",
-  "Helecho",
-  "Drácena",
-  "Yuca",
-  "Anturio",
-];
-
-const planta = {
-  nombre: "Aloe Vera",
-  nombreCientifico: "Aloe barbadensis miller",
-  subtitulo: "La planta de los mil usos medicinales",
-  familia: "Asphodelaceae",
-  origen: "Península",
-  clima: "Seco y subtropical",
-  dificultad: "Fácil",
-  toxicidad: "Moderada (tóxico para mascotas)",
-  imagen:
-    "https://images.unsplash.com/photo-1596547609652-9cf5d8c76921?w=800&q=80",
-};
-
-const fichaTecnica = [
-  { label: "Nombre científico", value: "Aloe barbadensis Miller" },
-  { label: "Familia", value: "Asphodelaceae" },
-  { label: "Origen", value: "Península Arábiga" },
-  { label: "Tipo", value: "Suculenta" },
-  { label: "Altura", value: "30-60 cm" },
-  { label: "Riego", value: "Bajo (cada 2-3 semanas)" },
-  { label: "Luz", value: "Indirecta brillante" },
-  { label: "Dificultad", value: "Principiante" },
-  { label: "Toxicidad", value: "Tóxico para gatos y perros" },
-];
-
-const cuidados = [
-  {
-    titulo: "Riego",
-    icono: "💧",
-    descripcion:
-      "Riega profundamente cada 2-3 semanas, dejando que el sustrato se seque completamente entre riegos. En invierno, reduce a una vez al mes.",
-    consejo:
-      "Es mejor quedarse corto que excederse. El exceso de agua es la causa principal de muerte del Aloe Vera.",
-  },
-  {
-    titulo: "Luz",
-    icono: "☀️",
-    descripcion:
-      "Necesita luz brillante e indirecta. Puede tolerar algo de sol directo por la mañana, pero evita las horas más intensas.",
-    consejo:
-      "Si las hojas se vuelven marrones, está recibiendo demasiado sol directo.",
-  },
-  {
-    titulo: "Temperatura",
-    icono: "🌡️",
-    descripcion:
-      "Ideal entre 15-27°C. No tolera heladas ni temperaturas inferiores a 10°C.",
-    consejo:
-      "En climas fríos, cultívelo en interior cerca de una ventana bien iluminada.",
-  },
-  {
-    titulo: "Sustrato",
-    icono: "🪴",
-    descripcion:
-      "Utiliza tierra para suculentas mezclada con perlita o arena gruesa para un drenaje excelente.",
-    consejo:
-      "Nunca uses tierra para plantas de interior estándar, retiene demasiada humedad.",
-  },
-  {
-    titulo: "Abonado",
-    icono: "🌱",
-    descripcion:
-      "Fertiliza una vez al mes durante primavera y verano con un fertilizante diluido para suculentas.",
-    consejo: "En otoño e invierno, suspende el abonado por completo.",
-  },
-];
-
-const plantasAliadas = [
-  {
-    nombre: "Echeveria",
-    razon: "Requieren cuidados similares: poco riego y mucha luz",
-  },
-  {
-    nombre: "Sansevieria",
-    razon: "Ambas toleran negligencia y purifican el aire",
-  },
-  { nombre: "Cactus", razon: "Comparten necesidades de drenaje y luz" },
-  { nombre: "Sedum", razon: "Suculentas que complementan perfectamente" },
-];
-
-const plantasContraproducentes = [
-  {
-    nombre: "Helechos",
-    razon: "Requieren alta humedad constante, incompatible con Aloe",
-  },
-  { nombre: "Calathea", razon: "Necesitan riego frecuente y ambiente húmedo" },
-  { nombre: "Singonium", razon: "Prefiere sustratos más húmedos y sombra" },
-  { nombre: "Asplenium", razon: "Ambientes tropicales demasiado húmedos" },
-];
-
-const prosContras = {
-  pros: [
-    "Propiedades medicinales reconocidas (quemaduras, heridas, hidratación)",
-    "Purifica el aire eliminando formaldehído y benceno",
-    "Extremadamente fácil de cuidar",
-    "Tolera períodos de abandono sin morir",
-    "Se propaga fácilmente mediante hijuelos",
-    "Aporta un toque decorativo moderno a cualquier espacio",
-  ],
-  contras: [
-    "Tóxico para mascotas (gatos y perros)",
-    "Puede ser irritante para pieles sensibles",
-    "Consumo interno del gel debe moderarse",
-    "Crece lentamente en interiores",
-    "Necesita espacio para sus raíces superficiales",
-  ],
-};
+const listaPlantas = plantas.map((p) => p.datosBases.nombre);
 ---
 
 <Layout>
@@ -289,7 +52,7 @@ const prosContras = {
             list="plantList"
           />
           <datalist id="plantList">
-            {plantas.map((p) => <option value={p} />)}
+            {listaPlantas.map((p) => <option value={p} />)}
           </datalist>
         </div>
       </div>
@@ -316,8 +79,8 @@ const prosContras = {
       <div class="container">
         <div class="plant-header">
           <div class="plant-title">
-            <h1>{planta.nombre}</h1>
-            <p class="subtitle">{planta.subtitulo}</p>
+            <h1>{planta.datosBases.nombre}</h1>
+            <p class="subtitle">{planta.datosBases.subtitulo}</p>
           </div>
           <div class="difficulty-badge" data-level="facil">
             <svg
@@ -330,17 +93,22 @@ const prosContras = {
               <path d="M2 17l10 5 10-5"></path>
               <path d="M2 12l10 5 10-5"></path>
             </svg>
-            <span>Fácil de cuidar</span>
+            <span>{planta.datosBases.dificultad} de cuidar</span>
           </div>
         </div>
 
         <div class="plant-showcase">
           <div class="plant-image">
-            <img src={planta.imagen} alt={planta.nombre} />
+            <img
+              src={planta.datosBases.imagen}
+              alt={planta.datosBases.nombre}
+            />
             <div class="plant-tags">
-              <span class="tag">Suculenta</span>
-              <span class="tag">Medicinal</span>
-              <span class="tag">Purificadora</span>
+              {
+                planta.apodos
+                  ?.slice(0, 3)
+                  .map((apodo: string) => <span class="tag">{apodo}</span>)
+              }
             </div>
           </div>
 
@@ -348,12 +116,14 @@ const prosContras = {
             <h2>Información General</h2>
             <div class="info-grid">
               {
-                fichaTecnica.map((item) => (
-                  <div class="info-item">
-                    <span class="info-label">{item.label}</span>
-                    <span class="info-value">{item.value}</span>
-                  </div>
-                ))
+                planta.fichaTecnica.map(
+                  (item: { label: string; value: string }) => (
+                    <div class="info-item">
+                      <span class="info-label">{item.label}</span>
+                      <span class="info-value">{item.value}</span>
+                    </div>
+                  ),
+                )
               }
             </div>
           </div>
@@ -381,28 +151,35 @@ const prosContras = {
             </h2>
             <div class="care-cards">
               {
-                cuidados.map((item) => (
-                  <div class="care-card">
-                    <div class="care-header">
-                      <span class="care-icon">{item.icono}</span>
-                      <h3>{item.titulo}</h3>
+                planta.cuidados.map(
+                  (item: {
+                    titulo: string;
+                    icono: string;
+                    descripcion: string;
+                    consejo: string;
+                  }) => (
+                    <div class="care-card">
+                      <div class="care-header">
+                        <span class="care-icon">{item.icono}</span>
+                        <h3>{item.titulo}</h3>
+                      </div>
+                      <p class="care-desc">{item.descripcion}</p>
+                      <div class="care-tip">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="M12 16v-4" />
+                          <path d="M12 8h.01" />
+                        </svg>
+                        <span>Consejo: {item.consejo}</span>
+                      </div>
                     </div>
-                    <p class="care-desc">{item.descripcion}</p>
-                    <div class="care-tip">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 16v-4" />
-                        <path d="M12 8h.01" />
-                      </svg>
-                      <span>Consejo: {item.consejo}</span>
-                    </div>
-                  </div>
-                ))
+                  ),
+                )
               }
             </div>
           </section>
@@ -422,7 +199,11 @@ const prosContras = {
                 Pros
               </h2>
               <ul>
-                {prosContras.pros.map((item) => <li>{item}</li>)}
+                {
+                  planta.prosContras?.pros?.map((item: string) => (
+                    <li>{item}</li>
+                  ))
+                }
               </ul>
             </div>
             <div class="contras">
@@ -440,7 +221,11 @@ const prosContras = {
                 Contras
               </h2>
               <ul>
-                {prosContras.contras.map((item) => <li>{item}</li>)}
+                {
+                  planta.prosContras?.contras?.map((item: string) => (
+                    <li>{item}</li>
+                  ))
+                }
               </ul>
             </div>
           </section>
@@ -462,28 +247,30 @@ const prosContras = {
               Plantas Aliadas
             </h2>
             <p class="section-desc">
-              Plantas que conviven bien con el Aloe Vera
+              Plantas que conviven bien con {planta.datosBases.nombre}
             </p>
             <div class="plants-list">
               {
-                plantasAliadas.map((item) => (
-                  <div class="plant-item ally">
-                    <div class="plant-icon ally">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
+                planta.plantasAliadas?.map(
+                  (item: { nombre: string; razon: string }) => (
+                    <div class="plant-item ally">
+                      <div class="plant-icon ally">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </div>
+                      <div class="plant-details">
+                        <span class="plant-name">{item.nombre}</span>
+                        <span class="plant-reason">{item.razon}</span>
+                      </div>
                     </div>
-                    <div class="plant-details">
-                      <span class="plant-name">{item.nombre}</span>
-                      <span class="plant-reason">{item.razon}</span>
-                    </div>
-                  </div>
-                ))
+                  ),
+                )
               }
             </div>
           </section>
@@ -505,25 +292,27 @@ const prosContras = {
             <p class="section-desc">Plantas con necesidades incompatibles</p>
             <div class="plants-list">
               {
-                plantasContraproducentes.map((item) => (
-                  <div class="plant-item enemy">
-                    <div class="plant-icon enemy">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path d="M18 6L6 18" />
-                        <path d="M6 6l12 12" />
-                      </svg>
+                planta.plantasContraproducentes?.map(
+                  (item: { nombre: string; razon: string }) => (
+                    <div class="plant-item enemy">
+                      <div class="plant-icon enemy">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M18 6L6 18" />
+                          <path d="M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <div class="plant-details">
+                        <span class="plant-name">{item.nombre}</span>
+                        <span class="plant-reason">{item.razon}</span>
+                      </div>
                     </div>
-                    <div class="plant-details">
-                      <span class="plant-name">{item.nombre}</span>
-                      <span class="plant-reason">{item.razon}</span>
-                    </div>
-                  </div>
-                ))
+                  ),
+                )
               }
             </div>
           </section>
@@ -543,8 +332,9 @@ const prosContras = {
               <span>IA Contextual</span>
             </div>
             <p>
-              ¿Tienes dudas específicas sobre el cuidado del Aloe Vera?
-              Pregúntale a nuestro asistente.
+              ¿Tienes dudas específicas sobre el cuidado de {
+                planta.datosBases.nombre
+              }? Pregúntale a nuestro asistente.
             </p>
             <button class="btn-ai" onclick="abrirSidebarChat()">
               <svg
@@ -565,7 +355,7 @@ const prosContras = {
     </div>
   </main>
 
-  <SidebarChat plantaNombre={planta.nombre} />
+  <SidebarChat plantaNombre={planta.datosBases.nombre} />
 
   <footer class="footer">
     <div class="container">
