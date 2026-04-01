@@ -2,11 +2,124 @@
 import type { GetStaticPaths } from "astro";
 import Layout from "@/layouts/Layout.astro";
 import SidebarChat from "@/components/SidebarChat.astro";
+import plantas from "@/data/plantas.json";
+console.log("traer plantas:", plantas);
 
 export const getStaticPaths = (() => {
-  const id = Astro.params.id;
-  return id;
+  return plantas.map((p) => ({ params: { id: p.id } }));
 }) satisfies GetStaticPaths;
+
+const { id } = Astro.params;
+console.log("planta:", id);
+
+const datos = {
+  datosBases: {
+    nombre: "Aloe Vera",
+    nombreCientifico: "Aloe barbadensis miller",
+    subtitulo: "La planta de los mil usos medicinales",
+    familia: "Asphodelaceae",
+    origen: "Península",
+    clima: "Seco y subtropical",
+    dificultad: "Fácil",
+    toxicidad: "Moderada (tóxico para mascotas)",
+    imagen:
+      "https://images.unsplash.com/photo-1596547609652-9cf5d8c76921?w=800&q=80",
+  },
+  fichaTecnica: [
+    { label: "Nombre científico", value: "Aloe barbadensis Miller" },
+    { label: "Familia", value: "Asphodelaceae" },
+    { label: "Origen", value: "Península Arábiga" },
+    { label: "Tipo", value: "Suculenta" },
+    { label: "Altura", value: "30-60 cm" },
+    { label: "Riego", value: "Bajo (cada 2-3 semanas)" },
+    { label: "Luz", value: "Indirecta brillante" },
+    { label: "Dificultad", value: "Principiante" },
+    { label: "Toxicidad", value: "Tóxico para gatos y perros" },
+  ],
+  cuidados: [
+    {
+      titulo: "Riego",
+      icono: "💧",
+      descripcion:
+        "Riega profundamente cada 2-3 semanas, dejando que el sustrato se seque completamente entre riegos. En invierno, reduce a una vez al mes.",
+      consejo:
+        "Es mejor quedarse corto que excederse. El exceso de agua es la causa principal de muerte del Aloe Vera.",
+    },
+    {
+      titulo: "Luz",
+      icono: "☀️",
+      descripcion:
+        "Necesita luz brillante e indirecta. Puede tolerar algo de sol directo por la mañana, pero evita las horas más intensas.",
+      consejo:
+        "Si las hojas se vuelven marrones, está recibiendo demasiado sol directo.",
+    },
+    {
+      titulo: "Temperatura",
+      icono: "🌡️",
+      descripcion:
+        "Ideal entre 15-27°C. No tolera heladas ni temperaturas inferiores a 10°C.",
+      consejo:
+        "En climas fríos, cultívelo en interior cerca de una ventana bien iluminada.",
+    },
+    {
+      titulo: "Sustrato",
+      icono: "🪴",
+      descripcion:
+        "Utiliza tierra para suculentas mezclada con perlita o arena gruesa para un drenaje excelente.",
+      consejo:
+        "Nunca uses tierra para plantas de interior estándar, retiene demasiada humedad.",
+    },
+    {
+      titulo: "Abonado",
+      icono: "🌱",
+      descripcion:
+        "Fertiliza una vez al mes durante primavera y verano con un fertilizante diluido para suculentas.",
+      consejo: "En otoño e invierno, suspende el abonado por completo.",
+    },
+  ],
+  plantasAliadas: [
+    {
+      nombre: "Echeveria",
+      razon: "Requieren cuidados similares: poco riego y mucha luz",
+    },
+    {
+      nombre: "Sansevieria",
+      razon: "Ambas toleran negligencia y purifican el aire",
+    },
+    { nombre: "Cactus", razon: "Comparten necesidades de drenaje y luz" },
+    { nombre: "Sedum", razon: "Suculentas que complementan perfectamente" },
+  ],
+  plantasContraproducentes: [
+    {
+      nombre: "Helechos",
+      razon: "Requieren alta humedad constante, incompatible con Aloe",
+    },
+    {
+      nombre: "Calathea",
+      razon: "Necesitan riego frecuente y ambiente húmedo",
+    },
+    { nombre: "Singonium", razon: "Prefiere sustratos más húmedos y sombra" },
+    { nombre: "Asplenium", razon: "Ambientes tropicales demasiado húmedos" },
+  ],
+
+  prosContras: {
+    pros: [
+      "Propiedades medicinales reconocidas (quemaduras, heridas, hidratación)",
+      "Purifica el aire eliminando formaldehído y benceno",
+      "Extremadamente fácil de cuidar",
+      "Tolera períodos de abandono sin morir",
+      "Se propaga fácilmente mediante hijuelos",
+      "Aporta un toque decorativo moderno a cualquier espacio",
+    ],
+    contras: [
+      "Tóxico para mascotas (gatos y perros)",
+      "Puede ser irritante para pieles sensibles",
+      "Consumo interno del gel debe moderarse",
+      "Crece lentamente en interiores",
+      "Necesita espacio para sus raíces superficiales",
+    ],
+  },
+};
 
 const plantas = [
   "Suculenta",
@@ -34,7 +147,7 @@ const planta = {
   nombreCientifico: "Aloe barbadensis miller",
   subtitulo: "La planta de los mil usos medicinales",
   familia: "Asphodelaceae",
-  origen: "Península阿拉伯半岛",
+  origen: "Península",
   clima: "Seco y subtropical",
   dificultad: "Fácil",
   toxicidad: "Moderada (tóxico para mascotas)",

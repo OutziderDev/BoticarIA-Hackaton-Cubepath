@@ -1,0 +1,983 @@
+[
+  {
+    "id": "aloe-vera",
+    "apodos": ["Sábila", "Aloe de Barbados", "Planta medicinal"],
+    "datosBases": {
+      "nombre": "Aloe Vera",
+      "nombreCientifico": "Aloe barbadensis miller",
+      "subtitulo": "La planta de los mil usos medicinales",
+      "familia": "Asphodelaceae",
+      "origen": "Península Arábiga",
+      "clima": "Seco y subtropical",
+      "dificultad": "Fácil",
+      "toxicidad": "Moderada (tóxico para mascotas)",
+      "imagen": "https://images.unsplash.com/photo-1596547609652-9cf5d8c76921?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Nombre científico", "value": "Aloe barbadensis Miller" },
+      { "label": "Familia", "value": "Asphodelaceae" },
+      { "label": "Origen", "value": "Península Arábiga" },
+      { "label": "Tipo", "value": "Suculenta" },
+      { "label": "Altura", "value": "30-60 cm" },
+      { "label": "Riego", "value": "Bajo (cada 2-3 semanas)" },
+      { "label": "Luz", "value": "Indirecta brillante" },
+      { "label": "Dificultad", "value": "Principiante" },
+      { "label": "Toxicidad", "value": "Tóxico para gatos y perros" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Riego",
+        "icono": "💧",
+        "descripcion": "Riega profundamente cada 2-3 semanas, dejando que el sustrato se seque completamente.",
+        "consejo": "Es mejor quedarse corto que excederse. El exceso de agua pudre la raíz."
+      },
+      {
+        "titulo": "Luz",
+        "icono": "☀️",
+        "descripcion": "Necesita luz brillante e indirecta. Evita las horas más intensas de sol.",
+        "consejo": "Si las hojas se vuelven marrones, está recibiendo demasiado sol directo."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "cactus", "nombre": "Cactus", "razon": "Comparten necesidades de drenaje y luz" },
+      {
+        "id": "sansevieria",
+        "nombre": "Sansevieria",
+        "razon": "Ambas toleran negligencia y purifican el aire"
+      }
+    ],
+    "plantasContraproducentes": [
+      {
+        "id": "helecho-boston",
+        "nombre": "Helechos",
+        "razon": "Requieren alta humedad constante, incompatible con Aloe"
+      }
+    ],
+    "prosContras": {
+      "pros": ["Propiedades medicinales", "Fácil de cuidar", "Purifica el aire"],
+      "contras": ["Tóxico para mascotas", "Crecimiento lento en interiores"]
+    }
+  },
+  {
+    "id": "monstera-deliciosa",
+    "apodos": ["Costilla de Adán", "Cerimán", "Filodendro de hoja partida"],
+    "datosBases": {
+      "nombre": "Monstera Deliciosa",
+      "nombreCientifico": "Monstera deliciosa",
+      "subtitulo": "La reina de la decoración tropical",
+      "familia": "Araceae",
+      "origen": "Selvas tropicales de México y Panamá",
+      "clima": "Cálido y húmedo",
+      "dificultad": "Media",
+      "toxicidad": "Alta para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Nombre científico", "value": "Monstera deliciosa" },
+      { "label": "Tipo", "value": "Trepadora tropical" },
+      { "label": "Altura", "value": "Hasta 2-3 metros en interior" },
+      { "label": "Riego", "value": "Moderado (cada 7-10 días)" },
+      { "label": "Luz", "value": "Indirecta media a brillante" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Humedad",
+        "icono": "☁️",
+        "descripcion": "Agradece que pulvericen sus hojas con agua o un humidificador.",
+        "consejo": "Limpia el polvo de sus hojas con un paño húmedo para que respire mejor."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "pothos", "nombre": "Pothos", "razon": "Ambas aman la humedad y luz indirecta." }
+    ],
+    "plantasContraproducentes": [
+      {
+        "id": "cactus",
+        "nombre": "Cactus",
+        "razon": "La Monstera necesita mucha más humedad que cualquier cactus."
+      }
+    ],
+    "prosContras": {
+      "pros": ["Estética impactante", "Tolera poca luz", "Crecimiento rápido"],
+      "contras": ["Necesita mucho espacio", "Sus raíces aéreas pueden ser invasivas"]
+    }
+  },
+  {
+    "id": "sansevieria",
+    "apodos": ["Lengua de suegra", "Espada de San Jorge", "Planta de serpiente"],
+    "datosBases": {
+      "nombre": "Sansevieria",
+      "nombreCientifico": "Dracaena trifasciata",
+      "subtitulo": "La planta indestructible",
+      "familia": "Asparagaceae",
+      "origen": "África occidental",
+      "clima": "Cualquiera (muy adaptable)",
+      "dificultad": "Muy fácil",
+      "toxicidad": "Moderada",
+      "imagen": "https://images.unsplash.com/photo-1599598425947-52033d599c27?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Muy bajo (una vez al mes)" },
+      { "label": "Luz", "value": "Cualquiera (desde sombra a sol directo)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Riego",
+        "icono": "💧",
+        "descripcion": "Olvídala. Solo riega cuando la tierra esté como polvo.",
+        "consejo": "Si dudas entre regar o no, no riegues."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "aloe-vera",
+        "nombre": "Aloe Vera",
+        "razon": "Requisitos de riego muy bajos similares."
+      }
+    ],
+    "plantasContraproducentes": [
+      {
+        "id": "lirio-paz",
+        "nombre": "Lirio de la Paz",
+        "razon": "El Lirio quiere agua constante, la Sansevieria no."
+      }
+    ],
+    "prosContras": {
+      "pros": ["Produce oxígeno de noche", "Casi imposible de matar", "Ocupa poco espacio"],
+      "contras": ["Crecimiento muy lento", "Sensible al frío extremo"]
+    }
+  },
+  {
+    "id": "pothos",
+    "apodos": ["Potus", "Teléfono", "Hiedra del diablo"],
+    "datosBases": {
+      "nombre": "Pothos",
+      "nombreCientifico": "Epipremnum aureum",
+      "subtitulo": "La trepadora ideal para principiantes",
+      "familia": "Araceae",
+      "origen": "Sudeste Asiático",
+      "clima": "Tropical templado",
+      "dificultad": "Fácil",
+      "toxicidad": "Tóxica para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1596439109013-1546b862140d?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Indirecta brillante (tolera media)" },
+      { "label": "Riego", "value": "Semanal (esperar a que seque la superficie)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Guía",
+        "icono": "🔗",
+        "descripcion": "Puedes dejar que cuelgue o darle un tutor para que trepe.",
+        "consejo": "Si las hojas pierden el color amarillo/blanco, es que le falta luz."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "monstera-deliciosa",
+        "nombre": "Monstera",
+        "razon": "Misma familia y cuidados similares."
+      }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": [
+        "Muy fácil de propagar en agua",
+        "Purifica el aire",
+        "Avisa cuando tiene sed bajando sus hojas"
+      ],
+      "contras": ["Tóxica por ingestión", "Puede volverse rala si no se poda"]
+    }
+  },
+  {
+    "id": "lirio-paz",
+    "apodos": ["Espatifilo", "Cuna de Moisés", "Bandera blanca"],
+    "datosBases": {
+      "nombre": "Lirio de la Paz",
+      "nombreCientifico": "Spathiphyllum",
+      "subtitulo": "Elegancia que purifica tu hogar",
+      "familia": "Araceae",
+      "origen": "América tropical",
+      "clima": "Húmedo y sombrío",
+      "dificultad": "Media",
+      "toxicidad": "Moderada",
+      "imagen": "https://images.unsplash.com/photo-1593691509543-c55fb32e7355?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Frecuente (mantener húmedo)" },
+      { "label": "Luz", "value": "Sombra o luz indirecta baja" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Riego",
+        "icono": "💧",
+        "descripcion": "Es una planta dramática: bajará todas sus hojas cuando necesite agua.",
+        "consejo": "Usa agua reposada o de lluvia; son sensibles al cloro."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "helecho-boston",
+        "nombre": "Helecho",
+        "razon": "Ambas aman la humedad alta en el aire."
+      }
+    ],
+    "plantasContraproducentes": [
+      { "id": "cactus", "nombre": "Cactus", "razon": "Entornos totalmente opuestos." }
+    ],
+    "prosContras": {
+      "pros": [
+        "Filtra toxinas del aire",
+        "Florece en interiores",
+        "Indica claramente sus necesidades"
+      ],
+      "contras": ["Sensible a corrientes de aire", "Puntas de hojas marrones si hay poca humedad"]
+    }
+  },
+  {
+    "id": "lavanda",
+    "apodos": ["Espliego", "Alhucema", "Lavándula"],
+    "datosBases": {
+      "nombre": "Lavanda",
+      "nombreCientifico": "Lavandula angustifolia",
+      "subtitulo": "Aroma relajante para tu jardín o balcón",
+      "familia": "Lamiaceae",
+      "origen": "Región Mediterránea",
+      "clima": "Soleado y seco",
+      "dificultad": "Media",
+      "toxicidad": "No tóxica",
+      "imagen": "https://images.unsplash.com/photo-1565011523534-747a8601f10a?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Sol directo (mínimo 6 horas)" },
+      { "label": "Riego", "value": "Bajo (dejar secar totalmente)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Drenaje",
+        "icono": "🏜️",
+        "descripcion": "Odia tener los 'pies mojados'. Necesita macetas con muchos agujeros.",
+        "consejo": "Poda después de la floración para mantenerla compacta."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "romero", "nombre": "Romero", "razon": "Compañeros mediterráneos ideales." }
+    ],
+    "plantasContraproducentes": [
+      { "id": "menta", "nombre": "Menta", "razon": "La menta requiere mucha más agua." }
+    ],
+    "prosContras": {
+      "pros": ["Atrae polinizadores", "Uso culinario y aromático", "Resistente a plagas"],
+      "contras": ["No sobrevive en interiores sin mucha luz", "Se vuelve leñosa con los años"]
+    }
+  },
+  {
+    "id": "romero",
+    "apodos": ["Rosmarino", "Hierba de la memoria"],
+    "datosBases": {
+      "nombre": "Romero",
+      "nombreCientifico": "Salvia rosmarinus",
+      "subtitulo": "La joya culinaria del mediterráneo",
+      "familia": "Lamiaceae",
+      "origen": "Mediterráneo",
+      "clima": "Cálido y soleado",
+      "dificultad": "Fácil",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1594313200057-04746f368022?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Escaso" },
+      { "label": "Sustrato", "value": "Arenoso / Muy drenante" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Sol",
+        "icono": "☀️",
+        "descripcion": "Cuanto más sol reciba, más potentes serán sus aceites esenciales.",
+        "consejo": "No lo abones demasiado; prefiere suelos pobres."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "lavanda", "nombre": "Lavanda", "razon": "Mismas necesidades de suelo y sol." },
+      {
+        "id": "tomillo",
+        "nombre": "Tomillo",
+        "razon": "Crecimiento rastrero que protege el suelo del romero."
+      }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Uso medicinal y cocina", "Muy resistente", "Siempre verde"],
+      "contras": ["Difícil de trasplantar", "Sensible al exceso de riego"]
+    }
+  },
+  {
+    "id": "menta",
+    "apodos": ["Yerba buena", "Menta de jardín", "Sandalo de jardín"],
+    "datosBases": {
+      "nombre": "Menta",
+      "nombreCientifico": "Mentha spicata",
+      "subtitulo": "Frescura invasiva y deliciosa",
+      "familia": "Lamiaceae",
+      "origen": "Europa y Asia",
+      "clima": "Templado y húmedo",
+      "dificultad": "Muy fácil",
+      "toxicidad": "Tóxica para perros/gatos en grandes cantidades",
+      "imagen": "https://images.unsplash.com/photo-1618376138011-92516407f614?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Alto (mantener siempre húmedo)" },
+      { "label": "Luz", "value": "Semisombra o sol filtrado" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Control",
+        "icono": "⚠️",
+        "descripcion": "Sus raíces son agresivas y colonizarán toda la maceta o jardín.",
+        "consejo": "Plántala siempre en una maceta individual para que no mate a otras."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "albahaca", "nombre": "Albahaca", "razon": "Ambas aman el agua y el sol matutino." }
+    ],
+    "plantasContraproducentes": [
+      { "id": "romero", "nombre": "Romero", "razon": "La menta ahogará al romero con su humedad." }
+    ],
+    "prosContras": {
+      "pros": ["Crecimiento ultra rápido", "Repèle algunos insectos", "Ideal para infusiones"],
+      "contras": ["Muy invasiva", "Atrae pulgón si se descuida el riego"]
+    }
+  },
+  {
+    "id": "cinta",
+    "apodos": ["Mala madre", "Lazo de amor", "Planta araña"],
+    "datosBases": {
+      "nombre": "Cinta",
+      "nombreCientifico": "Chlorophytum comosum",
+      "subtitulo": "La campeona de la purificación del aire",
+      "familia": "Asparagaceae",
+      "origen": "Sudáfrica",
+      "clima": "Templado",
+      "dificultad": "Muy fácil",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1572688390157-41764669865d?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Moderado (2 veces por semana en verano)" },
+      { "label": "Luz", "value": "Luz indirecta" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Propagación",
+        "icono": "👶",
+        "descripcion": "Produce 'hijos' que cuelgan de tallos largos; puedes cortarlos y ponerlos en agua.",
+        "consejo": "Si las puntas se secan, es por falta de humedad o cloro en el agua."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "pothos", "nombre": "Pothos", "razon": "Crecen bien juntas en cestas colgantes." }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Segura para gatos", "Elimina el monóxido de carbono", "Muy decorativa colgando"],
+      "contras": ["Puntas marrones frecuentes", "Necesita trasplante anual"]
+    }
+  },
+  {
+    "id": "ficus-lyrata",
+    "apodos": ["Higuera de hoja de violín", "Ficus de hoja grande"],
+    "datosBases": {
+      "nombre": "Ficus Lyrata",
+      "nombreCientifico": "Ficus lyrata",
+      "subtitulo": "La declaración de diseño en interiores",
+      "familia": "Moraceae",
+      "origen": "África occidental",
+      "clima": "Tropical",
+      "dificultad": "Difícil",
+      "toxicidad": "Tóxica para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1545239351-ef056c0082d4?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Mucha luz indirecta (crucial)" },
+      { "label": "Riego", "value": "Moderado (dejar secar ligeramente)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Estabilidad",
+        "icono": "🚫",
+        "descripcion": "Odia que la muevan de sitio. Reacciona tirando hojas si hay cambios bruscos.",
+        "consejo": "Limpia sus hojas gigantes para que absorba bien la luz."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "monstera-deliciosa",
+        "nombre": "Monstera",
+        "razon": "Ambas crean un rincón tropical dramático."
+      }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Pieza central de diseño", "Gran altura", "Hojas únicas"],
+      "contras": ["Muy caprichosa", "Sensible a corrientes de aire", "Propensa a ácaros"]
+    }
+  },
+  {
+    "id": "orquidea",
+    "apodos": ["Phalaenopsis", "Orquídea mariposa"],
+    "datosBases": {
+      "nombre": "Orquídea",
+      "nombreCientifico": "Phalaenopsis",
+      "subtitulo": "Belleza exótica de larga floración",
+      "familia": "Orchidaceae",
+      "origen": "Sudeste Asiático",
+      "clima": "Cálido y húmedo",
+      "dificultad": "Media",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1566393028639-d108a42c46a7?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Sustrato", "value": "Corteza de pino (no tierra)" },
+      { "label": "Riego", "value": "Inmersión (10 min una vez por semana)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Raíces",
+        "icono": "🌱",
+        "descripcion": "Sus raíces hacen fotosíntesis. Usa macetas transparentes.",
+        "consejo": "Si las raíces están grises, necesitan agua. Si están verdes, están bien."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "helecho-boston",
+        "nombre": "Helecho",
+        "razon": "El helecho aporta la humedad que la orquídea ama."
+      }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Flores que duran meses", "No necesita mucha luz", "Segura para mascotas"],
+      "contras": ["Requiere técnica de riego específica", "Floración anual"]
+    }
+  },
+  {
+    "id": "calathea",
+    "apodos": ["Planta cebra", "Planta de la oración", "Pavo real"],
+    "datosBases": {
+      "nombre": "Calathea",
+      "nombreCientifico": "Calathea majestica",
+      "subtitulo": "Hojas que bailan cada noche",
+      "familia": "Marantaceae",
+      "origen": "Brasil / Amazonía",
+      "clima": "Tropical húmedo",
+      "dificultad": "Alta",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1536882247184-574c1f56fdde?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Humedad", "value": "Muy alta (>60%)" },
+      { "label": "Luz", "value": "Indirecta baja a media" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Agua",
+        "icono": "💧",
+        "descripcion": "No tolera el agua del grifo. Usa agua destilada o de lluvia.",
+        "consejo": "Sus hojas se cierran de noche como si estuviera rezando."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "lirio-paz",
+        "nombre": "Lirio de la Paz",
+        "razon": "Ambas necesitan humedad constante."
+      }
+    ],
+    "plantasContraproducentes": [
+      {
+        "id": "aloe-vera",
+        "nombre": "Aloe Vera",
+        "razon": "El ambiente seco del Aloe matará a la Calathea."
+      }
+    ],
+    "prosContras": {
+      "pros": ["Patrones de hojas increíbles", "Segura para gatos", "Movimiento nocturno"],
+      "contras": ["Muy difícil de mantener", "Extremadamente sensible al agua del grifo"]
+    }
+  },
+  {
+    "id": "helecho-boston",
+    "apodos": ["Helecho espada", "Helecho doméstico"],
+    "datosBases": {
+      "nombre": "Helecho de Boston",
+      "nombreCientifico": "Nephrolepis exaltata",
+      "subtitulo": "La fuente verde de humedad",
+      "familia": "Lomariopsidaceae",
+      "origen": "Regiones tropicales",
+      "clima": "Húmedo",
+      "dificultad": "Media",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1510243462627-fe7ec6798099?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Frecuente (nunca dejar secar)" },
+      { "label": "Luz", "value": "Indirecta / Sombra" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Humedad",
+        "icono": "💦",
+        "descripcion": "Ideal para baños iluminados o cocinas debido al vapor.",
+        "consejo": "Si tira muchas hojas pequeñas, le falta humedad ambiental."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "calathea", "nombre": "Calathea", "razon": "Crean un microclima húmedo juntas." }
+    ],
+    "plantasContraproducentes": [
+      { "id": "cactus", "nombre": "Cactus", "razon": "El moho del helecho dañaría al cactus." }
+    ],
+    "prosContras": {
+      "pros": ["Purifica aire masivamente", "Aporta mucha frescura visual", "No tóxica"],
+      "contras": ["Ensucia al tirar hojas secas", "Requiere atención diaria"]
+    }
+  },
+  {
+    "id": "jade",
+    "apodos": ["Árbol del dinero", "Crásula", "Planta de la suerte"],
+    "datosBases": {
+      "nombre": "Planta de Jade",
+      "nombreCientifico": "Crassula ovata",
+      "subtitulo": "Longevidad y prosperidad en una suculenta",
+      "familia": "Crassulaceae",
+      "origen": "Sudáfrica",
+      "clima": "Seco",
+      "dificultad": "Fácil",
+      "toxicidad": "Tóxica para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1616140510250-70525f232491?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Tipo", "value": "Arbusto suculento" },
+      { "label": "Luz", "value": "Pleno sol o luz brillante" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Riego",
+        "icono": "💧",
+        "descripcion": "Sus hojas almacenan agua. Riega solo cuando estén algo arrugadas.",
+        "consejo": "Puede vivir décadas y convertirse en un pequeño bonsái."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "aloe-vera", "nombre": "Aloe Vera", "razon": "Mismas necesidades de bajo riego." }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Muy longeva", "Fácil de podar", "Resistente"],
+      "contras": ["Sensible al exceso de agua", "Tóxica si se ingiere"]
+    }
+  },
+  {
+    "id": "albahaca",
+    "apodos": ["Basílico", "Alhábega", "Hierba real"],
+    "datosBases": {
+      "nombre": "Albahaca",
+      "nombreCientifico": "Ocimum basilicum",
+      "subtitulo": "El aroma indispensable de la cocina",
+      "familia": "Lamiaceae",
+      "origen": "India e Irán",
+      "clima": "Cálido",
+      "dificultad": "Media",
+      "toxicidad": "Segura",
+      "imagen": "https://images.unsplash.com/photo-1618376138011-92516407f614?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Diario en verano" },
+      { "label": "Vida", "value": "Anual (muere tras florecer)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Floración",
+        "icono": "✂️",
+        "descripcion": "Corta las flores en cuanto salgan para que la planta siga dando hojas.",
+        "consejo": "No le gusta tener las hojas mojadas; riega directamente la tierra."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "tomate",
+        "nombre": "Tomate",
+        "razon": "En el huerto, la albahaca mejora el sabor del tomate."
+      }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Uso culinario directo", "Repele mosquitos", "Crecimiento rápido"],
+      "contras": ["Vida corta", "Se marchita rápido si falta agua"]
+    }
+  },
+  {
+    "id": "begonia",
+    "apodos": ["Begonia Rex", "Ala de ángel", "Flor de azúcar"],
+    "datosBases": {
+      "nombre": "Begonia",
+      "nombreCientifico": "Begonia rex-cultorum",
+      "subtitulo": "Color y patrones geométricos naturales",
+      "familia": "Begoniaceae",
+      "origen": "Asia tropical",
+      "clima": "Húmedo y sombrío",
+      "dificultad": "Media",
+      "toxicidad": "Tóxica para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Indirecta (evitar sol directo)" },
+      { "label": "Riego", "value": "Moderado (mantener humedad)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Hojas",
+        "icono": "🚫💧",
+        "descripcion": "No mojes sus hojas; son propensas a hongos si quedan húmedas.",
+        "consejo": "Prefiere macetas más anchas que profundas."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "helecho-boston", "nombre": "Helecho", "razon": "Amantes de la humedad ambiental." }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Colores espectaculares", "Variedad inmensa", "Llamativa"],
+      "contras": ["Propensa a oídio (hongos)", "Hojas frágiles"]
+    }
+  },
+  {
+    "id": "anturio",
+    "apodos": ["Anturio rojo", "Planta del amor", "Lengua de fuego"],
+    "datosBases": {
+      "nombre": "Anturio",
+      "nombreCientifico": "Anthurium andraeanum",
+      "subtitulo": "Corazones rojos que nunca se marchitan",
+      "familia": "Araceae",
+      "origen": "Colombia y Ecuador",
+      "clima": "Tropical húmedo",
+      "dificultad": "Media",
+      "toxicidad": "Alta para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1582885973491-9e7980e92271?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Brillante indirecta" },
+      { "label": "Riego", "value": "Moderado (dejar secar superficie)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Floración",
+        "icono": "❤️",
+        "descripcion": "Lo que parece una flor es en realidad una hoja modificada (espata).",
+        "consejo": "Necesita mucha luz para florecer, pero nunca sol directo."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "orquidea",
+        "nombre": "Orquídea",
+        "razon": "Mismos requisitos de humedad y temperatura."
+      }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Floración muy duradera", "Elegante", "Purifica el aire"],
+      "contras": ["Tóxica", "Sensible a sales en el agua"]
+    }
+  },
+  {
+    "id": "dracena",
+    "apodos": ["Drácena de hoja fina", "Marginata", "Árbol dragón"],
+    "datosBases": {
+      "nombre": "Drácena",
+      "nombreCientifico": "Dracaena marginata",
+      "subtitulo": "Estructura escultural para techos altos",
+      "familia": "Asparagaceae",
+      "origen": "Madagascar",
+      "clima": "Cálido",
+      "dificultad": "Fácil",
+      "toxicidad": "Tóxica para perros/gatos",
+      "imagen": "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Bajo (cada 10-14 días)" },
+      { "label": "Luz", "value": "Luz media (tolera baja)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Agua",
+        "icono": "💧",
+        "descripcion": "Es sensible al flúor. Si las puntas se ponen negras, usa agua filtrada.",
+        "consejo": "Es normal que pierda las hojas inferiores para formar el tronco."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "sansevieria", "nombre": "Sansevieria", "razon": "Misma familia, estética similar." }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Muy resistente", "Estilo moderno", "Fácil de mantener"],
+      "contras": ["Puntas marrones por agua del grifo", "Crecimiento lento"]
+    }
+  },
+  {
+    "id": "palmera-salon",
+    "apodos": ["Chamaedorea", "Palmera de interior", "Camadorea"],
+    "datosBases": {
+      "nombre": "Palmera de Salón",
+      "nombreCientifico": "Chamaedorea elegans",
+      "subtitulo": "Un oasis tropical en miniatura",
+      "familia": "Arecaceae",
+      "origen": "México y Guatemala",
+      "clima": "Templado",
+      "dificultad": "Fácil",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1512428813824-f7136746067c?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Baja a media" },
+      { "label": "Riego", "value": "Moderado" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Luz",
+        "icono": "🌑",
+        "descripcion": "Es una de las pocas palmeras que ama los rincones oscuros.",
+        "consejo": "No la trasplantes a menudo; tiene raíces delicadas."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "pothos",
+        "nombre": "Pothos",
+        "razon": "Crecen bien juntas en condiciones de poca luz."
+      }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Segura para gatos", "Ideal para principiantes", "No necesita mucha luz"],
+      "contras": ["Propensa a araña roja si el ambiente es muy seco"]
+    }
+  },
+  {
+    "id": "hiedra",
+    "apodos": ["Hiedra inglesa", "Yedra", "Hiedra común"],
+    "datosBases": {
+      "nombre": "Hiedra Inglesa",
+      "nombreCientifico": "Hedera helix",
+      "subtitulo": "Cascadas verdes y clásicas",
+      "familia": "Araliaceae",
+      "origen": "Europa",
+      "clima": "Fresco",
+      "dificultad": "Fácil",
+      "toxicidad": "Alta para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Riego", "value": "Moderado" },
+      { "label": "Luz", "value": "Brillante indirecta (tolera media)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Temperatura",
+        "icono": "❄️",
+        "descripcion": "Prefiere ambientes frescos. Evita ponerla cerca de calefactores.",
+        "consejo": "Pulveriza agua a menudo para evitar plagas de ácaros."
+      }
+    ],
+    "plantasAliadas": [],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": [
+        "Excelente purificadora",
+        "Crecimiento muy rápido",
+        "Versátil (colgante o trepadora)"
+      ],
+      "contras": ["Tóxica", "Atrae araña roja en interiores secos"]
+    }
+  },
+  {
+    "id": "pilea",
+    "apodos": ["Planta del dinero china", "Planta misionera", "UFO plant"],
+    "datosBases": {
+      "nombre": "Pilea",
+      "nombreCientifico": "Pilea peperomioides",
+      "subtitulo": "Hojas redondas que traen fortuna",
+      "familia": "Urticaceae",
+      "origen": "Sur de China",
+      "clima": "Templado",
+      "dificultad": "Media",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Brillante indirecta" },
+      { "label": "Riego", "value": "Semanal (esperar a que seque)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Rotación",
+        "icono": "🔄",
+        "descripcion": "Gira la maceta cada semana para que crezca simétrica; sus hojas buscan la luz.",
+        "consejo": "Da muchos hijos pequeños; sepáralos para regalar a amigos."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "peperomia", "nombre": "Peperomia", "razon": "Aspecto y cuidados parecidos." }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Muy fotogénica", "Segura para mascotas", "Fácil de propagar"],
+      "contras": ["Sus hojas se caen si le falta luz", "Sensible a cambios de temperatura"]
+    }
+  },
+  {
+    "id": "croton",
+    "apodos": ["Crotón de jardín", "Piedra de colores"],
+    "datosBases": {
+      "nombre": "Croton",
+      "nombreCientifico": "Codiaeum variegatum",
+      "subtitulo": "Un estallido de colores otoñales",
+      "familia": "Euphorbiaceae",
+      "origen": "Asia y el Pacífico",
+      "clima": "Cálido y húmedo",
+      "dificultad": "Media-Alta",
+      "toxicidad": "Alta",
+      "imagen": "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Mucha luz directa/brillante" },
+      { "label": "Humedad", "value": "Alta" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Luz",
+        "icono": "☀️",
+        "descripcion": "Si no recibe suficiente luz, sus hojas perderán el color rojo y amarillo.",
+        "consejo": "Odia las corrientes de aire frío."
+      }
+    ],
+    "plantasAliadas": [],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Colores únicos", "Llamativa", "Muy decorativa"],
+      "contras": ["Tira las hojas por estrés", "Tóxica (látex irritante)"]
+    }
+  },
+  {
+    "id": "aspidistra",
+    "apodos": ["Planta de hierro", "Hojas de salón", "Pilistra"],
+    "datosBases": {
+      "nombre": "Aspidistra",
+      "nombreCientifico": "Aspidistra elatior",
+      "subtitulo": "La planta que sobrevive a todo",
+      "familia": "Asparagaceae",
+      "origen": "Japón y Taiwán",
+      "clima": "Templado",
+      "dificultad": "Muy fácil",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1512428813824-f7136746067c?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Baja (sombra total)" },
+      { "label": "Riego", "value": "Bajo" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Luz",
+        "icono": "🌑",
+        "descripcion": "Es la planta ideal para pasillos oscuros o portales.",
+        "consejo": "Odia el sol directo; quemará sus hojas rápidamente."
+      }
+    ],
+    "plantasAliadas": [
+      {
+        "id": "sansevieria",
+        "nombre": "Sansevieria",
+        "razon": "Compañeras de resistencia extrema."
+      }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Indestructible", "Segura para mascotas", "Tolera negligencia"],
+      "contras": ["Crecimiento extremadamente lento", "Poco 'espectacular'"]
+    }
+  },
+  {
+    "id": "cactus-navidad",
+    "apodos": ["Schlumbergera", "Santa Teresita", "Cactus de Pascua"],
+    "datosBases": {
+      "nombre": "Cactus de Navidad",
+      "nombreCientifico": "Schlumbergera",
+      "subtitulo": "Color en pleno invierno",
+      "familia": "Cactaceae",
+      "origen": "Montañas de Brasil",
+      "clima": "Húmedo de montaña",
+      "dificultad": "Fácil",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1565011523534-747a8601f10a?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Tipo", "value": "Cactus epífito (no desértico)" },
+      { "label": "Riego", "value": "Moderado" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Floración",
+        "icono": "🌸",
+        "descripcion": "Necesita 12 horas de oscuridad total y frescor para florecer en Navidad.",
+        "consejo": "A diferencia de otros cactus, este no tolera la sequía extrema."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "orquidea", "nombre": "Orquídea", "razon": "Ambas son epífitas y crecen en troncos." }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Flores preciosas en invierno", "Segura para mascotas", "Muy longeva"],
+      "contras": ["Sus botones florales se caen si se mueve de sitio"]
+    }
+  },
+  {
+    "id": "haworthia",
+    "apodos": ["Cactus cebra", "Hawortia", "Planta perla"],
+    "datosBases": {
+      "nombre": "Suculenta Cebra",
+      "nombreCientifico": "Haworthiopsis fasciata",
+      "subtitulo": "Rayas blancas en un cuerpo compacto",
+      "familia": "Asphodelaceae",
+      "origen": "Sudáfrica",
+      "clima": "Seco",
+      "dificultad": "Fácil",
+      "toxicidad": "Segura para mascotas",
+      "imagen": "https://images.unsplash.com/photo-1596547609652-9cf5d8c76921?w=800&q=80"
+    },
+    "fichaTecnica": [
+      { "label": "Luz", "value": "Brillante indirecta" },
+      { "label": "Riego", "value": "Muy bajo (cada 3 semanas)" }
+    ],
+    "cuidados": [
+      {
+        "titulo": "Tamaño",
+        "icono": "📏",
+        "descripcion": "Ideal para escritorios o espacios pequeños ya que nunca crece mucho.",
+        "consejo": "No dejes que caiga agua en el centro de la roseta; se pudre."
+      }
+    ],
+    "plantasAliadas": [
+      { "id": "aloe-vera", "nombre": "Aloe Vera", "razon": "Misma familia y cuidados." }
+    ],
+    "plantasContraproducentes": [],
+    "prosContras": {
+      "pros": ["Segura para gatos", "Ocupa muy poco espacio", "Visualmente única"],
+      "contras": ["Sensible a la luz solar directa fuerte"]
+    }
+  }
+]
