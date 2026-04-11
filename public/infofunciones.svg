@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" >
+  <!-- icon post para cuidados -->
+  <symbol id="guiacuidado"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path d="M12 22c4-4 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 4 8 8 12z"
+    ></path>
+    <path d="M12 12v6"></path>
+    <path d="M9 15h6"></path>
+  </symbol>
+
+  <!--icon stack para poscontra -->
+  <symbol id="procontra"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+    <path d="M2 17l10 5 10-5"></path>
+    <path d="M2 12l10 5 10-5"></path>
+  </symbol>
+
+  <!-- icon hierba para planta aliada -->
+  <symbol id="plantaliada"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <path d="M12 2v6"></path>
+    <path d="M12 22v-6"></path>
+    <path d="M4.93 10.93l4.24 4.24"></path>
+    <path d="M14.83 8.83l4.24-4.24"></path>
+    <path d="M19.07 10.93l-4.24 4.24"></path>
+    <path d="M9.17 8.83L4.93 4.59"></path>
+  </symbol>
+
+  <!-- icon reloj 6pm para recomendaciones -->
+  <symbol id="recomendacion"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M12 16v-4"></path>
+    <path d="M12 8h.01"></path>
+  </symbol>
+
+</svg>

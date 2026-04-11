@@ -1,0 +1,26 @@
+[
+  {
+    "svg": "guiacuidado",
+    "titulo": "Guía de Cuidados",
+    "descrip": "Aprende todo sobre el riego, luz, sustrato y temperatura ideal para cada planta. Instrucciones paso a paso para principiantes.",
+    "color": "green"
+  },
+  {
+    "svg": "procontra",
+    "titulo": "Pros y Contras",
+    "descrip": "Conoce las ventajas y desventajas de tener cada planta en tu hogar. Información honesta para tomar la mejor decisión.",
+    "color": "teal"
+  },
+  {
+    "svg": "plantaliada",
+    "titulo": "Plantas Aliadas",
+    "descrip": "Descubre qué plantas se complementan entre sí y cuáles debes mantener separadas para un jardín más saludable.",
+    "color": "purple"
+  },
+  {
+    "svg": "recomendacion",
+    "titulo": "Recomendaciones",
+    "descrip": "Sugerencias personalizadas según tu experiencia, espacio disponible ytiempo que puedes dedicar al cuidado.",
+    "color": "orange"
+  }
+]
