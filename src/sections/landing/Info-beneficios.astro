@@ -6,7 +6,7 @@ import datosbeneficios from "@/data/infobeneficios.json";
   <div class="container">
     <div class="benefits-content">
       <div class="benefits-text">
-        <h2>¿Por qué elegir PlantaCare?</h2>
+        <h2>¿Por qué elegir PlantarIA?</h2>
         <p class="benefits-intro">
           Más que una simple base de datos, somos tu compañero en el mundo del
           cultivo
@@ -16,11 +16,10 @@ import datosbeneficios from "@/data/infobeneficios.json";
           {
             datosbeneficios.map((dato) => (
               <li>
-                <span class="check-icon">✓</span>
-                <div>
+                <span>
                   <strong>{dato["li-titulo"]}</strong>
-                  <p> {dato["li-descrip"]} </p>
-                </div>
+                </span>
+                <p> {dato["li-descrip"]} </p>
               </li>
             ))
           }
@@ -133,55 +132,60 @@ import datosbeneficios from "@/data/infobeneficios.json";
 </section>
 
 <style>
-  .container {
-    max-width: var(--maxwidth);
-    margin: auto;
-  }
-
   .benefits {
     padding: 6rem 0;
+    width: 100%;
+    height: auto;
+
+    & > .container {
+      max-width: var(--maxwidth);
+      margin: auto;
+    }
   }
 
   .benefits-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
     align-items: center;
-  }
 
-  .benefits-intro {
-    margin-bottom: 2rem;
-  }
+    & > .benefits-text {
+      color: var(--text-primary);
 
-  .benefits-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+      & > .benefits-intro {
+        color: color-mix(in srgb, var(--accent-green) 100%, white 20%);
+        margin-top: 1rem;
+        margin-bottom: 2.3rem;
+      }
 
-  .benefits-list li {
-    display: flex;
-    gap: 1rem;
-  }
+      & > .benefits-list {
+        list-style: circle;
+        list-style-position: inside;
 
-  .check-icon {
-    width: 28px;
-    height: 28px;
-    background: rgba(46, 160, 67, 0.2);
-    color: var(--accent-green-light);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    flex-shrink: 0;
-  }
+        & > li {
+          display: flex;
+          flex-direction: column;
+          gap: 0.4rem;
+          margin: 0 0 2rem 2rem;
+          position: relative;
 
-  .benefits-list strong {
-    display: block;
-    margin-bottom: 0.25rem;
-    color: var(--text-primary);
+          &::before {
+            content: "✅";
+            position: absolute;
+            top: 0;
+            left: -2rem;
+          }
+        }
+      }
+    }
+
+    @media (width <= 764px) {
+      grid-template-columns: 1fr;
+
+      .benefits-text > h2 {
+        text-align: center;
+      }
+    }
   }
 
   .benefits-visual {
