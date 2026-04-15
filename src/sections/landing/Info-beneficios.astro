@@ -1,5 +1,5 @@
 ---
-
+import datosbeneficios from "@/data/infobeneficios.json";
 ---
 
 <section id="beneficios" class="benefits">
@@ -13,46 +13,17 @@
         </p>
 
         <ul class="benefits-list">
-          <li>
-            <span class="check-icon">✓</span>
-            <div>
-              <strong>Información Verificada</strong>
-              <p>
-                Cada planta cuenta con datos verificados y actualizados
-                regularmente por expertos en botánica.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="check-icon">✓</span>
-            <div>
-              <strong>Fácil de Usar</strong>
-              <p>
-                Interfaz intuitiva diseñada para todas las edades. Sin
-                complicaciones, solo la información que necesitas.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="check-icon">✓</span>
-            <div>
-              <strong>Completamente Gratuito</strong>
-              <p>
-                Accede a toda la información sin costos ocultos ni
-                suscripciones. Tu jardín te lo agradecerá.
-              </p>
-            </div>
-          </li>
-          <li>
-            <span class="check-icon">✓</span>
-            <div>
-              <strong>Siempre Disponible</strong>
-              <p>
-                Consulta nuestra base de datos en cualquier momento, desde
-                cualquier dispositivo.
-              </p>
-            </div>
-          </li>
+          {
+            datosbeneficios.map((dato) => (
+              <li>
+                <span class="check-icon">✓</span>
+                <div>
+                  <strong>{dato["li-titulo"]}</strong>
+                  <p> {dato["li-descrip"]} </p>
+                </div>
+              </li>
+            ))
+          }
         </ul>
       </div>
 
@@ -162,6 +133,11 @@
 </section>
 
 <style>
+  .container {
+    max-width: var(--maxwidth);
+    margin: auto;
+  }
+
   .benefits {
     padding: 6rem 0;
   }
