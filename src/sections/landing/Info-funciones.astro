@@ -63,49 +63,49 @@ import infofunciones from "@/data/infofunciones.json";
           &:hover {
             background-color: var(--bg-hover);
           }
+
+          & > h3 {
+            margin-bottom: 0.75rem;
+            font-family: "Inter", sans-serif;
+          }
+
+          & > .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            margin-inline: auto;
+          }
+
+          & > .feature-icon svg {
+            width: 32px;
+            height: 32px;
+          }
         }
       }
     }
   }
 
-  .feature-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    margin-inline: auto;
-  }
-
-  .feature-icon svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .feature-icon.green {
+  .green {
     background: rgba(46, 160, 67, 0.15);
     color: var(--accent-green-light);
   }
 
-  .feature-icon.teal {
+  .teal {
     background: rgba(31, 111, 235, 0.15);
     color: var(--accent-teal);
   }
 
-  .feature-icon.purple {
+  .purple {
     background: rgba(163, 113, 247, 0.15);
     color: #a371f7;
   }
 
-  .feature-icon.orange {
+  .orange {
     background: rgba(219, 171, 13, 0.15);
     color: #dbab0d;
-  }
-
-  .feature-card h3 {
-    margin-bottom: 0.75rem;
-    font-family: "Inter", sans-serif;
   }
 </style>
