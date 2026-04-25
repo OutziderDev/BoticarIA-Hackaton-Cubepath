@@ -21,7 +21,7 @@
           </svg>
           <span>PlantaCare</span>
         </div>
-        <p>Tu compañero de confianza en el mundo del cultivo</p>
+        <p>Tu compañero de confianza en el mundo del cultivo.</p>
       </div>
       <div class="footer-links">
         <div class="footer-column">
@@ -51,16 +51,38 @@
     padding: 4rem 0 2rem;
   }
 
-  .footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-bottom: 3rem;
+  .container {
+    max-width: var(--maxwidth);
+    margin: auto;
+    padding: 0 1rem;
   }
 
-  .footer-brand p {
-    margin-top: 1rem;
-    font-size: 0.95rem;
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin-bottom: 3rem;
+
+    & > .footer-brand {
+      & .nav-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--accent-green-light);
+
+        & > svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      & > p {
+        margin-top: 1rem;
+        font-size: 0.95rem;
+      }
+    }
   }
 
   .footer-links {
